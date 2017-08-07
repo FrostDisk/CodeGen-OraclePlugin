@@ -1,0 +1,3 @@
+[submodule "CodeGen"]
+	path = CodeGen
+	url = https://github.com/FrostDisk/CodeGen.git
