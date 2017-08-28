@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CodeGen.Plugin.Base, Version=0.9.6.18946, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FrostDisk.CodeGen.Plugin.0.9.6.18946\lib\net461\CodeGen.Plugin.Base.dll</HintPath>
+    </Reference>
     <Reference Include="Oracle.DataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -63,12 +66,6 @@
     <Compile Include="Utils\MessageBoxHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\CodeGen\CodeGen\src\CodeGen.Plugin.Base\CodeGen.Plugin.Base.csproj">
-      <Project>{25cd4c77-2763-4139-a22f-26a589857780}</Project>
-      <Name>CodeGen.Plugin.Base</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="FormGenerateConnectionString.resx">
       <DependentUpon>FormGenerateConnectionString.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +73,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
